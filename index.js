@@ -36,7 +36,7 @@ client.on('message', message => {
 		}
 		
 	) 
-flip
+
 
 client.login(token);
 
