@@ -1,0 +1,2 @@
+1. Open terminal in visual studio en zet de code node main.js erin hierdoor start de bot op.
+2. bart cringe haha ;)
