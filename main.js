@@ -41,7 +41,7 @@ client.on('message', message => {
 			break;
 		case `${prefix}shutdown`:
 			message.channel.send(`Shutting down `);
-			resetBot(message.channel);
+			client.destroy();	
 			break;
 		default:
 			break;
