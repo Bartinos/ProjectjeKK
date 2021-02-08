@@ -1,23 +1,15 @@
-const Discord = require('discord.js');
+const DISCORD = require('discord.js');
 const { prefix, token } = require('./config.json');
-const client = new Discord.Client();
+const CLIENT = new DISCORD.Client();
 
-client.once('ready', () => {
+CLIENT.once('ready', () => {
 	console.log('Ready!');
 });
 
 
-client.on('message', message => {
+CLIENT.on('message', message => {
 	function flip() {
 		return Math.floor((Math.random() * 2) + 1)
-	}
-	result = flip();
-
-	if (result === 1) {
-		winner = 'HEADS'
-	}
-	else {
-		verliezer = 'Tails'
 	}
 
 	switch (message.content) {
@@ -46,7 +38,7 @@ client.on('message', message => {
 			break;
 		case `${prefix}shutdown`:
 			message.channel.send(`Shutting down `);
-			client.destroy();
+			CLIENT.destroy();
 			break;
 		default:
 			break;
@@ -55,5 +47,5 @@ client.on('message', message => {
 )
 
 
-client.login(token);
+CLIENT.login(token);
 
