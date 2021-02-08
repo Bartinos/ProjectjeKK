@@ -39,9 +39,14 @@ client.on('message', message => {
 		case `${prefix}poep`:
 			message.channel.send(` ${result}   `);
 			break;
+		case `${prefix}flip`:
+			// picks heads or tails with a 50% chance
+			let flipResult = Math.floor((Math.random() * 2) + 1) == 1 ? `heads` : `tails`;
+			message.channel.send(`It landed on ` + flipResult + `!`);
+			break;
 		case `${prefix}shutdown`:
 			message.channel.send(`Shutting down `);
-			client.destroy();	
+			client.destroy();
 			break;
 		default:
 			break;
