@@ -39,9 +39,9 @@ client.on('message', message => {
 		case `${prefix}poep`:
 			message.channel.send(` ${result}   `);
 			break;
-		case `${prefix}shutdown`:
-			message.channel.send(`Shutting down `);
-			resetBot(message.channel);
+		case `${prefix} shutdown`:
+			message.channel.send('Shutting down');
+			client.destroy() ; 
 			break;
 		default:
 			break;
